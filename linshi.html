@@ -1,0 +1,51 @@
+<div class="layui-card">
+						<div class="layui-card-header">
+							<i class="layui-icon layui-icon-search">筛选查询</i>
+							<input type="button" class="layui-btn" id="result" value="高级检索" style="float: right;" />
+							<input type="button" class="layui-btn" id="result" value="查询结果" style="float: right;" />
+							<div class="layui-card-body">
+								<form class="layui-form" action="" style="text-align: center; ">
+									<div class="layui-form-item">
+										<div class="layui-inline">
+											<label class="layui-form-label">企业账号:</label>
+											<div class="layui-input-inline">
+												<input class="layui-input" autocomplete="off" placeholder="企业ID/企业名称" name="coname" id="coname">
+											</div>
+										</div>
+										<div class="layui-inline">
+											<label class="layui-form-label">职位名称:</label>
+											<div class="layui-input-inline">
+												<input class="layui-input" autocomplete="off" placeholder="职位名称" name="poname" id="poname">
+											</div>
+										</div>
+
+										<div class="layui-inline">
+											<label class="layui-form-label">状态</label>
+											<div class="layui-input-inline">
+												<select name="city" lay-verify="">
+													<option value="">状态</option>
+													<option value="010">北京</option>
+													<option value="021">上海</option>
+													<option value="0571">杭州</option>
+												</select>
+											</div>
+										</div>
+										<div class="layui-inline">
+											<label class="layui-form-label">城市:</label>
+											<div class="layui-input-inline">
+												<select name="city" lay-verify="">
+													<option value="">请选择一个城市</option>
+													<option value="010">北京</option>
+													<option value="021">上海</option>
+													<option value="0571">杭州</option>
+												</select> </div>
+										</div>
+
+										<div class="layui-inline">
+											<label class="layui-form-label">注册时间:</label>
+											<div class="layui-input-inline">
+												<input type="text" class="layui-input" id="test1" placeholder="请选择时间">
+											</div>
+										</div>
+								</form>
+							</div>
