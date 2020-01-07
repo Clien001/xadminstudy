@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+	<head>
+		<meta charset="UTF-8">
+		<title>欢迎页面-X-admin2.2</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+		<link rel="stylesheet" href="../css/font.css">
+		<link rel="stylesheet" href="../css/xadmin.css">
+		<script src="../lib/layui/layui.js" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/xadmin.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<div class="layui-fluid" ng-controller="EnCustomerCtrl">
+			<div class="layui-row layui-col-space15">
+				<div class="layui-col-md12">
+                    <div class="layui-btn-container">
+                        <button type="button" class="layui-btn layui-btn-normal">全部简历 <span style="color: red;font-size: 14px;">(1000)</span></button> 
+                        <button type="button" class="layui-btn layui-btn-normal">企业客户简历 <span style="color: red;font-size: 14px;">(1000)</span></button> 
+                        <button type="button" class="layui-btn layui-btn-normal">个人客户简历 <span style="color: red;font-size: 14px;">(1000)</span></button> 
+                        <button type="button" class="layui-btn layui-btn-normal">已入职 <span style="color: red;font-size: 14px;">(1000)</span></button> 
+                        <button type="button" class="layui-btn layui-btn-normal">未入职 <span style="color: red;font-size: 14px;">(1000)</span></button> 
+                        <button type="button" class="layui-btn layui-btn-normal">新增简历 <span style="color: red;font-size: 14px;">(1000)</span></button> 
+                      </div>
+					<div class="layui-card">
+						<div class="layui-card-header">
+							<i class="layui-icon layui-icon-search">筛选查询</i>
+							<div class="layui-inline" style="float: right;">
+
+								<input type="button" class="layui-btn"  value="查询结果" />
+
+							</div>
+						</div>
+						<div class="layui-card-body" style="height: 60px; margin-bottom: 20px;">
+							<form class="layui-form" action="" style="text-align: center; ">
+								<div class="layui-form-item">
+									<div class="layui-inline">
+										<label class="layui-form-label">ID/用户名:</label>
+										<div class="layui-input-inline">
+											<input class="layui-input" autocomplete="off" placeholder="ID/用户名称" name="uname" id="uname">
+										</div>
+									</div>
+									<div class="layui-inline">
+										<label class="layui-form-label">手机号:</label>
+										<div class="layui-input-inline">
+											<input class="layui-input" autocomplete="off" placeholder="手机号码" name="phone" id="phone">
+										</div>
+									</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="layui-col-md12">
+				<div class="layui-card">
+					<div class="layui-card-header">
+						<i class="layui-icon layui-icon-list" style="font-size: 24px;"></i>数据列表
+						<div class="layui-inline" style="float: right;">
+							
+							<select name="size" lay-verify="" style="height: 30px;">
+								<option value="">显示条数</option>
+								<option value="010">10</option>
+								<option value="020">20</option>
+								<option value="030">30</option>
+							</select>
+							<select name="city" lay-verify="" style="height: 30px;">
+								<option value="">排序方式</option>
+								<option value="0">企业ID</option>
+								<option value="1">人数</option>
+								<option value="2">状态</option>
+							</select>
+						</div>
+					</div>
+					<div class="layui-card-body">
+						<table class="layui-table layui-form">
+							<thead>
+								<tr>
+									<th>
+										<input type="checkbox" name="" lay-skin="primary">
+									</th>
+									<th>编号</th>
+									<th>简历ID</th>
+									<th>姓名</th>
+									<th>手机号码</th>
+									<th>期望薪资</th>
+									<th>状态</th>
+									<th>已报名</th>
+									<th>入职企业</th>
+									<th>推荐职位</th>
+									<th>操作</th>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<input type="checkbox" name="" lay-skin="primary">
+									</td>
+									<td>1</td>
+									<td>00083578c4d9420aa89ff0e38b087155</td>
+									<td>林明楷</td>
+									<td>13155236698</td>
+									<td>15k-20k</td>
+									<td class="td-status">
+                                        <span class="layui-btn layui-btn-normal layui-btn-mini">已入职</span></td>
+                                        <td>5</td>
+                                    <td>安徽三只松鼠有限责任公司</td>
+                                    <td>12</td>
+									<td class="td-manage">
+										<a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
+											<i class="layui-icon">&#xe601;查看</i>
+										</a>
+										<a title="编辑" onclick="xadmin.open('编辑','admin-edit.html')" href="javascript:;">
+											<i class="layui-icon">&#xe642;编辑</i>
+										</a>
+										<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+											<i class="layui-icon">&#xe640;删除</i>
+										</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="layui-card-body ">
+					<div class="page">
+						<div>
+							<a class="prev" href="">&lt;&lt;</a>
+							<a class="num" href="">1</a>
+							<span class="current">2</span>
+							<a class="num" href="">3</a>
+							<a class="num" href="">489</a>
+							<a class="next" href="">&gt;&gt;</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		</div>
+		</div>
+	</body>
+	<script>
+		layui.use(['laydate', 'form'], function() {
+			var laydate = layui.laydate;
+			var form = layui.form;
+
+			//执行一个laydate实例
+			laydate.render({
+				elem: '#time' //指定元素
+			});
+
+			//执行一个laydate实例
+			laydate.render({
+				elem: '#end' //指定元素
+			});
+		});
+
+		/*用户-停用*/
+		function member_stop(obj, id) {
+			layer.confirm('确认要停用吗？', function(index) {
+
+				if ($(obj).attr('title') == '启用') {
+
+					//发异步把用户状态进行更改
+					$(obj).attr('title', '停用')
+					$(obj).find('i').html('&#xe62f;');
+
+					$(obj).parents("tr").find(".td-status").find('span').addClass('layui-btn-disabled').html('已停用');
+					layer.msg('已停用!', {
+						icon: 5,
+						time: 1000
+					});
+
+				} else {
+					$(obj).attr('title', '启用')
+					$(obj).find('i').html('&#xe601;');
+
+					$(obj).parents("tr").find(".td-status").find('span').removeClass('layui-btn-disabled').html('已启用');
+					layer.msg('已启用!', {
+						icon: 5,
+						time: 1000
+					});
+				}
+
+			});
+		}
+
+		/*用户-删除*/
+		function member_del(obj, id) {
+			layer.confirm('确认要删除吗？', function(index) {
+				//发异步删除数据
+				$(obj).parents("tr").remove();
+				layer.msg('已删除!', {
+					icon: 1,
+					time: 1000
+				});
+			});
+		}
+
+
+
+		function delAll(argument) {
+
+			var data = tableCheck.getData();
+
+			layer.confirm('确认要删除吗？' + data, function(index) {
+				//捉到所有被选中的，发异步进行删除
+				layer.msg('删除成功', {
+					icon: 1
+				});
+				$(".layui-form-checked").not('.header').parents('tr').remove();
+			});
+		}
+	</script>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+</html>
