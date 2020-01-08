@@ -30,17 +30,41 @@
 							<form class="layui-form" action="" style="text-align: center; ">
 								<div class="layui-form-item">
 									<div class="layui-inline">
-										<label class="layui-form-label">客户账号:</label>
+										<label class="layui-form-label">企业账号:</label>
 										<div class="layui-input-inline">
-											<input class="layui-input" autocomplete="off" placeholder="客户ID/账号" name="uid" id="uid">
+											<input class="layui-input" autocomplete="off" placeholder="企业ID/企业名称" name="coname" id="coname">
 										</div>
 									</div>
 									<div class="layui-inline">
 										<label class="layui-form-label">职位名称:</label>
 										<div class="layui-input-inline">
-											<input class="layui-input" autocomplete="off" placeholder="客户名称" name="uname" id="uname">
+											<input class="layui-input" autocomplete="off" placeholder="职位名称" name="poname" id="poname">
 										</div>
 									</div>
+
+									<div class="layui-inline">
+										<label class="layui-form-label">状态</label>
+										<div class="layui-input-inline">
+											<select name="status" lay-verify="">
+												<option value="0">状态</option>
+												<option value="1">启用</option>
+												<option value="2">停用</option>
+
+											</select>
+										</div>
+									</div>
+									<div class="layui-inline">
+										<label class="layui-form-label">城市:</label>
+										<div class="layui-input-inline">
+											<select name="city" lay-verify="">
+												<option value="">请选择一个城市</option>
+												<option value="010">北京</option>
+												<option value="020">上海</option>
+												<option value="030">杭州</option>
+											</select>
+										</div>
+									</div>
+
 									<div class="layui-inline">
 										<label class="layui-form-label">注册时间:</label>
 										<div class="layui-input-inline">
@@ -86,13 +110,14 @@
 										<input type="checkbox" name="" lay-skin="primary">
 									</th>
 									<th>编号</th>
-									<th>客户ID</th>
-									<th>客户名称</th>
-									<th>注册时间</th>
-									<th>账户状态</th>
-									<th>账户余额</th>
-                                    <th>邀请人</th>
-                                    <th>状态控制</th>
+									<th>企业ID</th>
+									<th>企业名称</th>
+									<th>总用户数</th>
+									<th>职位管理</th>
+									<th>简历数</th>
+									<th>状态</th>
+									<th>城市</th>
+									<th>状态控制</th>
 									<th>操作</th>
 							</thead>
 							<tbody>
@@ -102,13 +127,14 @@
 									</td>
 									<td>1</td>
 									<td>00083578c4d9420aa89ff0e38b087155</td>
-									<td>user</td>
-									<td>2020-01-02 12:12:30</td>
+									<td>有诺</td>
+									<td>1000</td>
+									<td>10</td>
+									<td>10000</td>
 									<td class="td-status">
 										<span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td>
-                                    <td>2003.5</td>
-                                    <td>admin</td>
-                                    <td><input type="checkbox" name="status" lay-skin="switch" lay-text="启用|停用"></td>
+									<td>芜湖</td>
+									<td><input type="checkbox" name="status" lay-skin="switch" lay-text="启用|停用"></td>
 									<td class="td-manage">
 										<a onclick="member_stop(this,'10001')" href="javascript:;" title="启用">
 											<i class="layui-icon">&#xe601;查看</i>
