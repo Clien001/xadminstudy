@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-X-admin2.2</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+        content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/xadmin.css">
+    <script src="../lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/xadmin.js"></script>
+    <script>
+        layui.use(['laydate', 'form'], function () {
+            var laydate = layui.laydate;
+            var form = layui.form;
+
+            //执行一个laydate实例
+            laydate.render({
+                elem: '#time' //指定元素
+            });
+        });
+    </script>
+    <title></title>
+</head>
+
+<body>
+    <div class="layui-fluid" ng-controller="">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md12">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        举报详情
+                    </div>
+                    <div class="layui-card-body"
+                        style="height: fit-content; margin-bottom: 20px;">
+                        <div class="layui-col-md-offset5" >
+                        <form class="layui-form layui-form-pane" action="">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">编号</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="id" lay-verify="required" disabled value="100001"
+                                        autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">举报类型</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="type" lay-verify="required" disabled value="职位"
+                                        autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">举报人</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="user" lay-verify="required" disabled value="林明楷"
+                                        autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">举报时间</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="time" lay-verify="required" disabled
+                                        value="2020:-01-11 15:11:11" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">举报对象</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="name" lay-verify="required" disabled value="账户名称"
+                                        autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">举报状态</label>
+                                <div class="layui-input-inline">
+                                    <span class="layui-btn layui-btn-danger layui-btn-mini">未处理</span>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">举报内容</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="content" lay-verify="required" disabled value="虚假职位"
+                                        autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">处理备注</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="extra" lay-verify="required" value="" autocomplete="off"
+                                        class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <button class="layui-btn" lay-submit="" lay-filter="demo2">有效举报</button>
+                                <button class="layui-btn layui-btn-warm" lay-submit="" lay-filter="demo2">恶意举报</button>
+                                <button class="layui-btn layui-btn-danger" lay-submit=""
+                                    lay-filter="demo2">无效举报</button>
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
