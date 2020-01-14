@@ -13,9 +13,15 @@
 	<script src="../lib/layui/layui.js" charset="utf-8"></script>
 	<script type="text/javascript" src="../js/xadmin.js"></script>
 	<script>
-		layui.use('form', function () {
-			var form = layui.form;
-		});
+		 layui.use(['laydate', 'form'], function () {
+            var laydate = layui.laydate;
+            var form = layui.form;
+
+            //执行一个laydate实例
+            laydate.render({
+                elem: '#time' //指定元素
+            });
+        });
 	</script>
 	<title></title>
 </head>
