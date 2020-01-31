@@ -13,9 +13,16 @@
 	<script src="../lib/layui/layui.js" charset="utf-8"></script>
 	<script type="text/javascript" src="../js/xadmin.js"></script>
 	<script>
-		layui.use('form', function () {
-			var form = layui.form;
-		});
+		  layui.use(['laydate', 'form','table'], function () {
+            var laydate = layui.laydate;
+            var form = layui.form;
+			var table = layui.table;
+
+            //执行一个laydate实例
+            laydate.render({
+                elem: '#time' //指定元素
+            });
+        });
 	</script>
 	<title></title>
 </head>
@@ -69,9 +76,9 @@
 
 
 
-			<div class="layui-col-md12">
-				<div class="layui-card">
-					<div class="layui-card-header">
+			<div class="layui-col-md12" s>
+				<div class="layui-card" >
+					<div class="layui-card-header" style="min-height: 2%">
 						<i class="layui-icon layui-icon-list" style="font-size: 24px;"></i>数据列表
 						<div class="layui-inline" style="float: right;">
 							<input type="button" class="layui-btn" value="发送短信" />
@@ -89,13 +96,14 @@
 								<option value="2">状态</option>
 							</select>
 						</div>
+						
 					</div>
 				</div>
 			</div>
 
-			<div class="layui-col-md12" >
+			<div class="layui-col-md12">
 				<div class="layui-card">
-					<div class="layui-card-header">
+					<div class="layui-card-header" style="height: fit-content;">
 						<input type="checkbox" />
 						发布人员：admin 发送时间：2019-10-17 15:47:44 接收对象：200人
 						<div class="layui-inline" style="float: right;">
@@ -110,7 +118,7 @@
 
 			<div class="layui-col-md12">
 				<div class="layui-card">
-					<div class="layui-card-header">
+					<div class="layui-card-header" style="height: fit-content;">
 						<input type="checkbox" />
 						发布人员：admin 发送时间：2019-10-17 15:47:44 接收对象：200人
 						<div class="layui-inline" style="float: right;">

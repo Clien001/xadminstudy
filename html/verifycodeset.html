@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-X-admin2.2</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+        content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/xadmin.css">
+    <script src="../lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/xadmin.js"></script>
+    <script>
+        layui.use(['laydate', 'form'], function () {
+            var laydate = layui.laydate;
+            var form = layui.form;
+
+            //执行一个laydate实例
+            laydate.render({
+                elem: '#time' //指定元素
+            });
+        });
+    </script>
+    <title></title>
+</head>
+
+<body>
+    <div class="layui-fluid" ng-controller="EnCustomerCtrl">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md12">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        验证码设置
+                    </div>
+                    <div class="layui-card-body">
+                        <form class="layui-form layui-col-md-offset4" action="" style="text-align: center;">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label"><span style="color: red;">*</span>启用验证码：</label>
+                                <div class="layui-input-block" style="text-align: left;">
+                                    <input type="checkbox" name="" title="新用户注册" lay-skin="primary" checked>
+                                    <input type="checkbox" name="" title="用户登录" lay-skin="primary" checked> 
+                                    <input type="checkbox" name="" title="发表相关评论" lay-skin="primary" checked> 
+                                    <input type="checkbox" name="" title="后台系统登录" lay-skin="primary" checked> 
+                                   <p style="width: 40%;"> 启用验证码可以避免恶意批量评论或提交信息，推荐打开验证码功能。注意: 启用验证码会使得部分操作变得繁琐，建议仅在必需时打开</p>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label" ><span style="color: red;">*</span>登录失败时显示验证码：</label>
+                                <div class="layui-input-block" style="text-align: left;">
+                                    <input type="radio" name="sex" value="开启" title="开启">
+                                    <input type="radio" name="sex" value="关闭" title="关闭" checked>
+                                    <p style="width: 40%;">选择“开启”将在用户登录失败 3 次后才显示验证码，选择“关闭”将始终在登录时显示验证码。注意: 只有在启用了用户登录验证码时本设置才有效</p>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label" style="width: fit-content;"><span style="color: red;">*</span>验证码方式：</label>
+                                <div class="layui-input-block" style="text-align: left;">
+                                    <input type="radio" name="sex" value="图形验证码" title="图形验证码">
+                                    <input type="radio" name="sex" value="滑动验证码" title="滑动验证码" checked>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label" style="width: fit-content;"><span style="color: red;">*</span>图形验证码宽度:</label>
+                                <div class="layui-input-block">
+                                    <input class="layui-input" autocomplete="off" placeholder="" name="wid"
+                                        id="title" style="width: 25%;">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label" style="width: fit-content;"><span style="color: red;">*</span>图形验证码高度:</label>
+                                <div class="layui-input-block">
+                                    <input class="layui-input" autocomplete="off" placeholder="" name="hei"
+                                        id="title" style="width: 25%;">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label" style="width: fit-content;"><span style="color: red;">*</span>图形验证码大小:</label>
+                                <div class="layui-input-block">
+                                    <input class="layui-input" autocomplete="off" placeholder="" name="size"
+                                        id="title" style="width: 25%;">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label" style="width: fit-content;"><span style="color: red;">*</span>图形验证码位数:</label>
+                                <div class="layui-input-block">
+                                    <input class="layui-input" autocomplete="off" placeholder="" name="num"
+                                        id="title" style="width: 25%;">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label" style="width: fit-content;">图形验证码预览:</label>
+                                <div class="layui-input-block" style="text-align: left;">
+                                    <img src="../images/12.jpeg" alt="200*200">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <button class="layui-btn  layui-col-md5 layui-col-sm-offset2" style="width: 21%;" lay-filter="demo2" >提交</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

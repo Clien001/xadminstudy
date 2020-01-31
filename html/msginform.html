@@ -12,12 +12,10 @@
     <link rel="stylesheet" href="../css/xadmin.css">
     <script src="../lib/layui/layui.js" charset="utf-8"></script>
     <script type="text/javascript" src="../js/xadmin.js"></script>
-    <title></title>
     <script>
-        layui.use(['laydate', 'form', 'table'], function () {
+        layui.use(['laydate', 'form'], function () {
             var laydate = layui.laydate;
             var form = layui.form;
-            var table = layui.table;
 
             //执行一个laydate实例
             laydate.render({
@@ -25,51 +23,49 @@
             });
         });
     </script>
+    <title></title>
 </head>
 
 <body>
-    <div class="layui-fluid" ng-controller="logsAdminLoginCtrl">
+    <div class="layui-fluid" ng-controller="EnCustomerCtrl">
         <div class="layui-row layui-col-space15">
             <div class="layui-col-md12">
                 <div class="layui-card">
-                    <div class="layui-card-body ">
-
-                        <form class="layui-form layui-col-space5">
-                            <div class="layui-input-inline layui-show-xs-block">
-                                <input class="layui-input" placeholder="开始日" name="start" id="start" lay-key="1">
-                            </div>
-                            <div class="layui-input-inline layui-show-xs-block">
-                                <input class="layui-input" placeholder="截止日" name="end" id="end" lay-key="2">
-                            </div>
-                            <div class="layui-input-inline layui-show-xs-block">
-                                <button class="layui-btn" lay-submit="" lay-filter="sreach">
-                                    <i class="layui-icon"></i>
-                                </button>
-                            </div>
-                        </form>
+                    <div class="layui-card-header">
+                        消息提醒
                     </div>
                     <div class="layui-card-body layui-table-body layui-table-main">
                         <table class="layui-table layui-form">
                             <thead>
                                 <tr>
-                                    <th>id</th>
-                                    <th>时间</th>
-                                    <th>IP</th>
-                                    <th>地区</th>
-                                    <th>浏览器</th>
-                                </tr>
+                                    <th>
+                                        <input type="checkbox" name="" lay-skin="primary">
+                                    </th>
+                                    <th>消息类型</th>
+                                    <th>电子邮件</th>
+                                    <th>站内消息</th>
+                                    <th>手机短信</th>
+                                    <th>App消息推送</th>
                             </thead>
                             <tbody>
-                                <tr ng-repeat="item in list">
-                                    <td ng-bind="item.id"></td>
-                                    <td ng-bind="item.create_time"></td>
-                                    <td ng-bind="item.ip"></td>
-                                    <td ng-bind="item.ip_location"></td>
-                                    <td ng-bind="item.browser"></td>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" lay-skin="primary">
+                                    </td>
+                                    <td>系统公告</td>
+                                    <td><input type="checkbox" name="" lay-skin="primary" checked>是否发送 &nbsp; <span
+                                            style="color: 	#009688;">编辑内容</span></td>
+                                    <td><input type="checkbox" name="" lay-skin="primary" checked>是否发送 &nbsp; <span
+                                            style="color: 	#009688;">编辑内容</span></td>
+                                    <td><input type="checkbox" name="" lay-skin="primary" checked>是否发送 &nbsp; <span
+                                            style="color: 	#009688;">编辑内容</span></td>
+                                    <td><input type="checkbox" name="" lay-skin="primary" checked>是否发送 &nbsp; <span
+                                            style="color: 	#009688;">编辑内容</span></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+
                     <div class="layui-card-body ">
                         <div class="page">
                             <div>

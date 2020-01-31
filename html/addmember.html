@@ -47,65 +47,58 @@
             <div class="layui-col-md12">
                 <div class="layui-card">
                     <div class="layui-card-header">
-                        添加广告
+                        添加成员
                     </div>
                     <div class="layui-card-body" style="height: fit-content; margin-bottom: 20px;">
                         <div class="layui-col-md-offset5">
-                            <form class="layui-form layui-form" action="" style="text-align: center;">
+                            <form class="layui-form" action="" style="text-align: center;">
                                 <div class="layui-form-item">
-                                    <label class="layui-form-label"><span style="color: red;">*</span>广告名称：</label>
+                                    <label class="layui-form-label"><span style="color: red;">*</span>成员名称：</label>
                                     <div class="layui-input-inline">
                                         <input type="text" name="id" lay-verify="required" value=""
                                             autocomplete="off" class="layui-input" >
                                     </div>
                                 </div>
+                                
                                 <div class="layui-form-item">
-                                    <label class="layui-form-label"><span style="color: red;">*</span>广告位置：</label>
+                                    <label class="layui-form-label"><span style="color: red;">*</span>成员姓名：</label>
+                                    <div class="layui-input-inline">
+                                        <input class="layui-input"  name="realname" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label"><span style="color: red;">*</span>邮箱地址：</label>
+                                    <div class="layui-input-inline">
+                                        <input class="layui-input" name="email" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label"><span style="color: red;">*</span>所属部门：</label>
                                     <div class="layui-input-inline" >
                                         <select name="quiz1">
                                             <option value="" selected="">请选择</option>
-                                            <option value="浙江">浙江省</option>
-                                            <option value="你的工号">江西省</option>
-                                            <option value="你最喜欢的老师">福建省</option>
+                                            <option value="浙江">技术部</option>
+                                            <option value="你的工号">人力资源部</option>
+                                            <option value="你最喜欢的老师">后勤保障部</option>
                                         </select>
+                                        <h6 style="text-align: left;" >选择所属部门后默认继承部门权限，可在成员列表中单独设置权限</h6>
                                     </div>
+                                   
                                 </div>
                                 <div class="layui-form-item">
-                                    <label class="layui-form-label"><span style="color: red;">*</span>开始时间：</label>
+                                    <label class="layui-form-label"><span style="color: #DF5000;">*</span>登录密码：</label>
                                     <div class="layui-input-inline">
-										<input class="layui-input" id="time" name="time" placeholder="请选择时间">
-									</div>
+                                        <input type="text" name="email" class="layui-input" >
+                                    </div>
                                 </div>
                                 <div class="layui-form-item">
-                                    <label class="layui-form-label"><span style="color: red;">*</span>到期时间：</label>
+                                    <label class="layui-form-label"><span style="color: #DF5000;">*</span>重复密码：</label>
                                     <div class="layui-input-inline">
-										<input class="layui-input" id="time" name="time" placeholder="请选择时间">
-									</div>
-                                </div>
-                                <div class="layui-form-item">
-                                    <label class="layui-form-label">状态：</label>
-                                    <div class="layui-input-block" style="text-align: left;">
-                                      <input type="radio" name="status" value="上线" title="上线">
-                                      <input type="radio" name="status" value="下线" title=下线 checked>
-                                    </div>
-                                  </div>
-                                <div class="layui-form-item">
-                                    <label class="layui-form-label"><span style="color: red;">*</span>广告图片：</label>
-                                    <div class="layui-input-inline" style="text-align: left;">
-                                        <button type="button" class="layui-btn" id="test1">
-                                            <i class="layui-icon">&#xe67c;</i>上传图片
-                                          </button>
+                                        <input type="text" name="email" class="layui-input" >
                                     </div>
                                 </div>
                                 <div class="layui-form-item">
-                                    <label class="layui-form-label"><span style="color: red;">*</span>广告链接：</label>
-                                    <div class="layui-input-inline">
-                                        <input type="text" name="link" lay-verify="required" value=""
-                                            autocomplete="off" class="layui-input">
-                                    </div>
-                                </div>
-                                <div class="layui-form-item">
-                                    <label class="layui-form-label">广告备注：</label>
+                                    <label class="layui-form-label">备注信息：</label>
                                     <div class="layui-input-inline">
                                         <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
                                     </div>

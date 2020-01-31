@@ -27,34 +27,44 @@
 </head>
 
 <body>
-    <div class="layui-fluid" ng-controller="helpCtrl">
+    <div class="layui-fluid" ng-controller="EnCustomerCtrl">
         <div class="layui-row layui-col-space15">
             <div class="layui-col-md12">
                 <div class="layui-card">
                     <div class="layui-card-header">
                         <i class="layui-icon layui-icon-search">筛选查询</i>
                         <div class="layui-inline" style="float: right;">
+
                             <input type="button" class="layui-btn" value="查询结果" />
+
                         </div>
                     </div>
                     <div class="layui-card-body" style="height: fit-content; margin-bottom: 20px;">
                         <form class="layui-form" action="" style="text-align: center; ">
                             <div class="layui-form-item">
                                 <div class="layui-inline">
-                                    <label class="layui-form-label">帮助标题:</label>
+                                    <label class="layui-form-label">广告标题:</label>
                                     <div class="layui-input-inline">
                                         <input class="layui-input" autocomplete="off" placeholder="标题" name="title"
                                             id="title">
                                     </div>
                                 </div>
+
                                 <div class="layui-inline">
-                                    <label class="layui-form-label">帮助分类</label>
+                                    <label class="layui-form-label">广告位置</label>
                                     <div class="layui-input-inline">
                                         <select name="status" lay-verify="">
                                             <option value="0">全部</option>
                                             <option value="1">admin</option>
                                             <option value="2">user</option>
+
                                         </select>
+                                    </div>
+                                </div>
+                                <div class="layui-inline">
+                                    <label class="layui-form-label">到期时间:</label>
+                                    <div class="layui-input-inline">
+                                        <input class="layui-input" id="time" name="time" placeholder="请选择时间">
                                     </div>
                                 </div>
                             </div>
@@ -62,13 +72,15 @@
                     </div>
                 </div>
             </div>
+
+
+
             <div class="layui-col-md12">
                 <div class="layui-card">
                     <div class="layui-card-header">
                         <i class="layui-icon layui-icon-list" style="font-size: 24px;"></i>数据列表
                         <div class="layui-inline" style="float: right;">
-                            <input type="button" class="layui-btn" value="发布帮助" />
-                            <input type="button" class="layui-btn" value="分类管理" />
+                            <input type="button" class="layui-btn" value="添加广告" />
                             <select name="size" lay-verify="" style="height: 30px;">
                                 <option value="">显示条数</option>
                                 <option value="010">10</option>
@@ -91,12 +103,13 @@
                                         <input type="checkbox" name="" lay-skin="primary">
                                     </th>
                                     <th>编号</th>
-                                    <th>封面图片</th>
-                                    <th>标题</th>
-                                    <th>分类</th>
-                                    <th>显示状态</th>
-                                    <th>发布时间</th>
-                                    <th>查看数</th>
+                                    <th>广告名称</th>
+                                    <th>广告位置</th>
+                                    <th>广告图片</th>
+                                    <th>时间</th>
+                                    <th>状态控制</th>
+                                    <th>点击次数</th>
+                                    <th>客户</th>
                                     <th>操作</th>
                             </thead>
                             <tbody>
@@ -105,19 +118,20 @@
                                         <input type="checkbox" name="" lay-skin="primary">
                                     </td>
                                     <td>1001</td>
+                                    <td>华为手机 </td>
+                                    <td>首页</td>
                                     <td><img src="../images/12.jpeg" /></td>
-                                    <td>如何能够更好的上一层楼？ </td>
-                                    <td>常见问题</td>
-                                    <td><input type="checkbox" name="status" lay-skin="switch" lay-text="显示|隐藏"></td>
-                                    <td>2020-12-12 15:55:0</td>
-                                    <td>100</td>
+                                    <td>开始时间：2020-12-12 15:55:02<br>到期时间：2021-12-12 16:55:02</td>
+                                    <td><input type="checkbox" name="status" lay-skin="switch" lay-text="上线|下线"></td>
+                                    <td>200</td>
+                                    <td>50</td>
                                     <td class="td-manage">
                                         <div class="layui-btn-group">
                                             <button type="button" class="layui-btn layui-btn-normal"
-                                                onclick="xadmin.open('iframe页面中打开open事例','https://www.163.com')">查看</button>
+                                                onclick="xadmin.open('iframe页面中打开open事例','https://www.163.com')">编辑</button>
                                             <button type="button" class="layui-btn layui-btn-warm"
                                                 onclick="xadmin.open('编辑','admin-edit.html')"
-                                                href="javascript:;">编辑</button>
+                                                href="javascript:;">置顶</button>
                                             <button type="button" class="layui-btn layui-btn-danger"
                                                 onclick="member_del(this,'要删除的id')" href="javascript:;">删除</button>
                                         </div>
@@ -126,14 +140,15 @@
                             </tbody>
                         </table>
                     </div>
+
                     <div class="layui-card-body ">
                         <div class="page">
                             <div>
                                 <a class="prev" href="">&lt;&lt;</a>
-                                <span class="current">1</span>
-                                <a class="num" href="">2</a>
+                                <a class="num" href="">1</a>
+                                <span class="current">2</span>
                                 <a class="num" href="">3</a>
-                                <a class="num" href="">4...89</a>
+                                <a class="num" href="">489</a>
                                 <a class="next" href="">&gt;&gt;</a>
                             </div>
                         </div>

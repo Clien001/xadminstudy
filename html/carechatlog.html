@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-X-admin2.2</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+        content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/xadmin.css">
+    <script src="../lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/xadmin.js"></script>
+    <script>
+        layui.use(['laydate', 'form', 'element'], function () {
+            var laydate = layui.laydate;
+            var form = layui.form;
+            var element = layui.element;
+
+            //执行一个laydate实例
+            laydate.render({
+                elem: '#time' //指定元素
+            });
+        });
+    </script>
+    <title></title>
+</head>
+
+<body>
+    <div class="layui-fluid" ng-controller="">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md12">
+                <div class="layui-card">
+
+                    <div class="layui-card-header">
+                        当前客服：小优
+                    </div>
+                    <div class="layui-card-body" style="height: fit-content; margin-bottom: 20px;">
+                        <div class="layui-table layui-table-body layui-table-main">
+                            <table class="layui-table layui-form">
+                                <thead>
+                                    <tr>
+                                        <th>历史接待次数</th>
+                                        <th>历史接待人数</th>
+                                        <th>今日接待次数</th>
+                                        <th>今日接待人数</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>100</td>
+                                        <td>100</td>
+                                        <td>100</td>
+                                        <td>100</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="layui-row" style="margin-top: 3%;">
+                            <div class="layui-col-md6">
+                                <div class="layui-tab ">
+                                    <ul class="layui-tab-title">
+                                        <li class="layui-this">今天</li>
+                                        <li>最近一周</li>
+                                        <li>最近一月</li>
+                                        <li>全部</li>
+                                    </ul>
+                                    <div class="layui-tab-content">
+                                        <div class="layui-tab-item layui-show">
+                                            <table class="layui-table">
+                                                <tr>
+                                                    <td>
+                                                        <div style="display: inline-block;vertical-align: middle;">
+                                                            <img src="../images/12.jpeg" alt="" width="40px"
+                                                                height="40px">
+                                                        </div>
+                                                        <div
+                                                            style="display: inline-block; margin-left: 2%;vertical-align:middle;">
+                                                            <p>小问<br>开始时间：2019-10-17
+                                                                11:40:03 结束时间：2019-10-17 11:50:55</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div style="display: inline-block;vertical-align: middle;">
+                                                            <img src="../images/12.jpeg" alt="" width="40px"
+                                                                height="40px">
+                                                        </div>
+                                                        <div
+                                                            style="display: inline-block; margin-left: 2%;vertical-align:middle;">
+                                                            <p>小问<br>开始时间：2019-10-17
+                                                                11:40:03 结束时间：2019-10-17 11:50:55</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div style="display: inline-block;vertical-align: middle;">
+                                                            <img src="../images/12.jpeg" alt="" width="40px"
+                                                                height="40px">
+                                                        </div>
+                                                        <div
+                                                            style="display: inline-block; margin-left: 2%;vertical-align:middle;">
+                                                            <p>小问<br>开始时间：2019-10-17
+                                                                11:40:03 结束时间：2019-10-17 11:50:55</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div style="display: inline-block;vertical-align: middle;">
+                                                            <img src="../images/12.jpeg" alt="" width="40px"
+                                                                height="40px">
+                                                        </div>
+                                                        <div
+                                                            style="display: inline-block; margin-left: 2%;vertical-align:middle;">
+                                                            <p>小问<br>开始时间：2019-10-17
+                                                                11:40:03 结束时间：2019-10-17 11:50:55</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div style="display: inline-block;vertical-align: middle;">
+                                                            <img src="../images/12.jpeg" alt="" width="40px"
+                                                                height="40px">
+                                                        </div>
+                                                        <div
+                                                            style="display: inline-block; margin-left: 2%;vertical-align:middle;">
+                                                            <p>小问<br>开始时间：2019-10-17
+                                                                11:40:03 结束时间：2019-10-17 11:50:55</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div style="display: inline-block;vertical-align: middle;">
+                                                            <img src="../images/12.jpeg" alt="" width="40px"
+                                                                height="40px">
+                                                        </div>
+                                                        <div
+                                                            style="display: inline-block; margin-left: 2%;vertical-align:middle;">
+                                                            <p>小问<br>开始时间：2019-10-17
+                                                                11:40:03 结束时间：2019-10-17 11:50:55</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div style="display: inline-block;vertical-align: middle;">
+                                                            <img src="../images/12.jpeg" alt="" width="40px"
+                                                                height="40px">
+                                                        </div>
+                                                        <div
+                                                            style="display: inline-block; margin-left: 2%;vertical-align:middle;">
+                                                            <p>小问<br>开始时间：2019-10-17
+                                                                11:40:03 结束时间：2019-10-17 11:50:55</p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <div class="page">
+                                                <div>
+                                                    <a class="prev" href="">&lt;&lt;</a>
+                                                    <span class="current">1</span>
+                                                    <a class="num" href="">2</a>
+                                                    <a class="num" href="">3</a>
+                                                    <a class="num" href="">489</a>
+                                                    <a class="next" href="">&gt;&gt;</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-tab-item">内容2</div>
+                                        <div class="layui-tab-item">内容3</div>
+                                        <div class="layui-tab-item">内容4</div>
+                                        <div class="layui-tab-item">内容5</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-md6">
+                                <div class="layui-tab">
+                                    <ul class="layui-tab-title">
+                                    </ul>
+                                    <div class="layui-tab-content">
+                                        <div class="layui-tab-item layui-show"
+                                            style="border:1px solid gainsboro; margin-top: 5px;">
+                                            <div
+                                                style="width:200px; height:30px;background:#F0F0F0;border-radius:20px;text-align: center;margin: 0 auto;line-height: 30px;margin-top: 10px;">
+                                                <span style="vertical-align:middle;font-size: 14px;color: #c2c2c2;">
+                                                    2019-10-17 10:47:42</span>
+                                            </div>
+                                            <div style="margin-bottom: 16px;">
+                                                <table class="layui-table" lay-skin="nob">
+                                                    <tr>
+                                                        <td>
+                                                            <sparn style="color:#d2d2d2;">小问 2019-10-17 10:47:42</sparn>
+                                                            <br>
+                                                            您好！很高兴为您服务~活动期间咨询人数较多，请您耐心等候！
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <sparn style="color:#d2d2d2;">小问 2019-10-17 10:47:42</sparn>
+                                                            <br>
+                                                            您好！请问有什么可以帮到您。
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <sparn style="color:#d2d2d2;">大梨 2019-10-17 10:48:42</sparn>
+                                                            <br>
+                                                            什么时候可以
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <sparn style="color:#d2d2d2;">大梨 2019-10-17 10:48:42</sparn>
+                                                            <br>
+                                                            什么时候可以
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <sparn style="color:#d2d2d2;">大梨 2019-10-17 10:48:42</sparn>
+                                                            <br>
+                                                            什么时候可以
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <sparn style="color:#d2d2d2;">小问 2019-10-17 10:47:42</sparn>
+                                                            <br>
+                                                            您好！请问有什么可以帮到您。
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-row">
+                                        <div class="layui-col-md5 layui-col-md-offset1">
+                                            <form class="layui-form" action="">
+                                                <div class="layui-form-item">
+
+                                                    <div class="layui-inline">
+                                                        <div class="layui-input-inline" style="width: 100px;">
+                                                            <button type="button" class="layui-btn">
+                                                                <i class="layui-icon">&#xe66d;</i> 导出
+                                                            </button>
+                                                        </div>
+                                                        <div class="layui-input-inline" style="width: 100px;">
+                                                            <input type="text" name="time" id="time" placeholder="选择时间"
+                                                                class="layui-input" style="float: right;" />
+                                                        </div>
+                                                        <div class="layui-input-inline" style="width: 100px;">
+                                                            <input type="text" name="keyword" placeholder="关键字搜索"
+                                                                class="layui-input">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="layui-col-md6">
+                                            <div class="page">
+                                                <div>
+                                                    <a class="prev" href="">&lt;&lt;</a>
+                                                    <span class="current">1</span>
+                                                    <a class="num" href="">2</a>
+                                                    <a class="num" href="">3</a>
+                                                    <a class="num" href="">489</a>
+                                                    <a class="next" href="">&gt;&gt;</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
